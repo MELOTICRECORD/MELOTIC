@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>윤영준 음악감독 | 멜로틱레코드 대표</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf8;--bg2:#f2f1ed;--card:#fff;--dark:#1a1a1a;--navy:#1b2a4a;--accent:#b8860b;--accent2:#c9971e;--gray:#6b6b6b;--gray2:#999;--border:#e0ded8;--border2:#d0cec6}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--dark);line-height:1.8;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--navy);border-radius:3px}
+img{max-width:100%;height:auto;display:block}
+
+.top-bar{background:var(--navy);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.top-bar-left{font-family:'Outfit',sans-serif;font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:2px}
+.top-bar-right{font-size:.72rem;color:rgba(255,255,255,.7)}.top-bar-right a{color:var(--accent2);text-decoration:none}
+nav{background:var(--card);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.nav-name{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:700;color:var(--navy);padding:.9rem 0}
+.nav-name span{font-weight:400;font-size:.8rem;color:var(--gray);margin-left:.6rem;font-family:'Noto Sans KR',sans-serif}
+.nav-links{display:flex;gap:0;list-style:none}.nav-links a{display:block;padding:.9rem 1rem;font-size:.75rem;color:var(--gray);text-decoration:none;font-weight:500;border-bottom:2px solid transparent;transition:all .3s}.nav-links a:hover{color:var(--navy);border-bottom-color:var(--accent)}
+
+.hero{background:var(--navy);padding:3rem 2rem 2.5rem;display:flex;gap:3rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.hero-photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:3px solid rgba(184,134,11,.3);flex-shrink:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-info{max-width:600px}
+.hero-badge{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);border:1px solid rgba(184,134,11,.3);padding:.25rem .7rem;margin-bottom:1rem}
+.hero h1{font-family:'Noto Serif KR',serif;font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;color:#fff;line-height:1.35;margin-bottom:.4rem}
+.hero-sub{font-size:.92rem;color:rgba(255,255,255,.6);font-weight:300;margin-bottom:1.5rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.2rem}.hero-meta-item{display:flex;align-items:center;gap:.4rem}
+.hero-meta-item .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.hero-meta-item span{font-size:.78rem;color:rgba(255,255,255,.7)}
+
+.awards-banner{background:var(--card);border-bottom:1px solid var(--border);padding:1.5rem 2rem}
+.awards-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.award-badge{display:flex;align-items:center;gap:.5rem}.award-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
+.award-year{font-size:.6rem;color:var(--accent);font-weight:600;letter-spacing:1px}.award-name{font-size:.78rem;font-weight:600;color:var(--dark)}
+
+section{padding:3.5rem 2rem}.sec{max-width:900px;margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;border-bottom:2px solid var(--navy);padding-bottom:.7rem}
+.sec-num{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:700;color:var(--accent);letter-spacing:2px}
+.sec-title{font-family:'Noto Serif KR',serif;font-size:1.3rem;font-weight:700;color:var(--navy)}
+
+/* Photo Gallery */
+.photo-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:2rem}
+.photo-row.three{grid-template-columns:1fr 1fr 1fr}
+.photo-card{position:relative;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/10}
+.photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.photo-card:hover img{transform:scale(1.03)}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:.8rem .6rem .5rem;font-size:.7rem;color:#fff;font-weight:400}
+
+/* Timeline */
+.tl{position:relative}.tl::before{content:'';position:absolute;left:14px;top:0;bottom:0;width:1px;background:var(--border2)}
+.tl-item{position:relative;padding-left:44px;padding-bottom:2rem}.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:8px;top:6px;width:13px;height:13px;border:2px solid var(--navy);background:var(--card);border-radius:50%;z-index:1}
+.tl-item.hl .tl-dot{background:var(--accent);border-color:var(--accent)}
+.tl-year{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:600;color:var(--accent);letter-spacing:1px}
+.tl-title{font-size:.92rem;font-weight:700;color:var(--dark)}.tl-org{font-size:.78rem;color:var(--gray)}
+.tl-desc{font-size:.78rem;color:var(--gray);font-weight:300;margin-top:.2rem}
+
+/* Committee */
+.cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.cm-card{background:var(--card);border:1px solid var(--border);padding:1.2rem;transition:border-color .3s}.cm-card:hover{border-color:var(--navy)}
+.cm-rank{font-family:'Outfit',sans-serif;font-size:.58rem;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:.3rem}
+.cm-name{font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:.15rem}.cm-role{font-size:.75rem;color:var(--gray)}
+
+/* Projects Table */
+.ptable{width:100%;border-collapse:collapse}
+.ptable thead th{background:var(--navy);color:#fff;font-size:.7rem;font-weight:600;padding:.6rem .8rem;text-align:left}
+.ptable td{padding:.65rem .8rem;font-size:.8rem;border-bottom:1px solid var(--border)}.ptable tr:hover{background:var(--bg2)}
+.ptable .yr{font-family:'Outfit',sans-serif;font-weight:600;color:var(--navy);white-space:nowrap;width:65px}
+.ptable .nm{font-weight:600}.ptable .rl{color:var(--gray)}.ptable .nt{font-size:.7rem;color:var(--accent);font-weight:500}
+
+/* YouTube */
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.yt-card{background:var(--card);border:1px solid var(--border);overflow:hidden}
+.yt-card iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+.yt-label{padding:.6rem .8rem;font-size:.75rem;font-weight:500;color:var(--dark)}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.edu-item{background:var(--card);border:1px solid var(--border);padding:1rem 1.2rem;display:flex;gap:.8rem}
+.edu-marker{width:4px;min-height:100%;background:var(--navy);flex-shrink:0;border-radius:1px}
+.edu-item.uni .edu-marker{background:var(--accent)}
+.edu-name{font-size:.82rem;font-weight:600;color:var(--dark)}.edu-detail{font-size:.72rem;color:var(--gray)}
+
+.lec-cats{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.lec-cat{background:var(--card);border:1px solid var(--border);padding:1.3rem}
+.lec-cat h4{font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:.7rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+.lec-cat ul{list-style:none}.lec-cat li{font-size:.75rem;color:var(--gray);padding:.2rem 0 .2rem .8rem;position:relative}
+.lec-cat li::before{content:'';position:absolute;left:0;top:.6rem;width:4px;height:4px;background:var(--accent);border-radius:50%}
+
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.5rem}
+.course-card{background:var(--navy);padding:1.3rem;text-align:center}
+.course-num{font-family:'Outfit',sans-serif;font-size:.62rem;color:var(--accent2);letter-spacing:2px;font-weight:600;margin-bottom:.4rem}
+.course-name{font-size:.85rem;font-weight:700;color:#fff;line-height:1.4}
+
+/* Artists */
+.art-grid{display:flex;flex-wrap:wrap;gap:.4rem}
+.art-tag{font-size:.72rem;padding:.35rem .8rem;background:var(--card);border:1px solid var(--border);color:var(--dark)}
+.art-tag small{color:var(--gray2);font-size:.62rem;margin-left:.2rem}
+
+/* Credentials */
+.cred-list{columns:2;column-gap:2rem}.cred-item{padding:.4rem 0;border-bottom:1px solid var(--border);break-inside:avoid;display:flex;gap:.5rem;align-items:baseline}
+.cred-num{font-family:'Outfit',sans-serif;font-size:.63rem;font-weight:700;color:var(--navy);min-width:16px}
+.cred-text{font-size:.78rem;color:var(--dark)}.cred-text small{color:var(--gray);font-size:.7rem}
+
+/* CTA */
+.cta{background:var(--navy);padding:3rem 2rem;text-align:center}
+.cta h2{font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:.4rem}
+.cta p{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:300;margin-bottom:1.8rem;line-height:1.7}
+.cta-btn{display:inline-block;font-size:.88rem;font-weight:600;color:var(--navy);text-decoration:none;padding:.8rem 2.2rem;background:var(--accent2);transition:all .3s}
+.cta-btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.cta-fields{margin-top:1.2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.cta-field{font-size:.72rem;color:rgba(255,255,255,.5)}.cta-field strong{color:rgba(255,255,255,.8);font-weight:500}
+
+footer{padding:1.2rem 2rem;text-align:center;font-size:.65rem;color:var(--gray2);border-top:1px solid var(--border);background:var(--bg2)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+.nav-links{display:none}.hero{flex-direction:column;text-align:center;gap:1.5rem}.hero-meta{justify-content:center}
+.awards-inner{flex-direction:column}.cm-grid,.edu-grid,.lec-cats,.yt-grid{grid-template-columns:1fr}
+.courses{grid-template-columns:1fr}.cred-list{columns:1}.photo-row,.photo-row.three{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-left">MELOTIC RECORD</div>
+  <div class="top-bar-right">문의: <a href="mailto:dlrnjsrlwkd&#64;naver.com">dlrnjsrlwkd&#64;naver.com</a></div>
+</div>
+
+<nav>
+  <div class="nav-name">윤영준<span>음악감독 · 콘텐츠 디렉터</span></div>
+  <ul class="nav-links">
+    <li><a href="#career">주요 이력</a></li>
+    <li><a href="#committee">대외활동</a></li>
+    <li><a href="#projects">프로젝트</a></li>
+    <li><a href="#music">음원</a></li>
+    <li><a href="#education">교육활동</a></li>
+    <li><a href="#credentials">자격사항</a></li>
+    <li><a href="#contact">문의</a></li>
+  </ul>
+</nav>
+
+<!-- HERO with Profile Photo -->
+<section class="hero">
+  <div class="hero-photo">
+    <img src="images/profile2.jpg" alt="윤영준 음악감독">
+  </div>
+  <div class="hero-info">
+    <div class="hero-badge">음악감독 · 콘텐츠 디렉터</div>
+    <h1>윤영준 (尹英準)</h1>
+    <div class="hero-sub">멜로틱레코드 대표 | 음원 제작 · 공연 기획 · 음악 교육</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="dot"></div><span>한국음악저작권협회 준회원 (2018~)</span></div>
+      <div class="hero-meta-item"><div class="dot"></div><span>한국음악실연자연합회 회원 (2019~)</span></div>
+      <div class="hero-meta-item"><div class="dot"></div><span>한국예술인복지재단 예술인 등록</span></div>
+      <div class="hero-meta-item"><div class="dot"></div><span>공식 등록곡 76곡 이상</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards -->
+<div class="awards-banner">
+  <div class="awards-inner">
+    <div class="award-badge"><div class="award-icon">&#127942;</div><div><div class="award-year">2025</div><div class="award-name">통일부 장관 표창</div></div></div>
+    <div class="award-badge"><div class="award-icon">&#127942;</div><div><div class="award-year">2025</div><div class="award-name">서울시 교육청 교육감 표창</div></div></div>
+    <div class="award-badge"><div class="award-icon">&#127942;</div><div><div class="award-year">2024</div><div class="award-name">동작문화재단 이사장 표창</div></div></div>
+  </div>
+</div>
+
+<!-- Photo Gallery -->
+<section style="background:var(--bg2)">
+  <div class="sec reveal">
+    <div class="photo-row">
+      <div class="photo-card"><img src="images/concert1.jpg" alt="공연 현장"><div class="photo-caption">광복80주년 기념 음악토크콘서트 '유산' (2025)</div></div>
+      <div class="photo-card"><img src="images/concert2.jpg" alt="공연 단체사진"><div class="photo-caption">콘서트 '유산' 출연진과 함께</div></div>
+    </div>
+    <div class="photo-row three">
+      <div class="photo-card"><img src="images/studio.jpg" alt="스튜디오"><div class="photo-caption">음원 제작 스튜디오</div></div>
+      <div class="photo-card"><img src="images/lecture.jpg" alt="강의"><div class="photo-caption">강의 현장</div></div>
+      <div class="photo-card"><img src="images/albums.jpg" alt="앨범"><div class="photo-caption">멜로틱 발매 앨범</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Career -->
+<section id="career">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">주요 이력</h2></div>
+    <div class="tl">
+      <div class="tl-item hl"><div class="tl-dot"></div><div class="tl-year">2025</div><div class="tl-title">광복 80주년 기념 음악토크콘서트 '유산' 총감독</div><div class="tl-org">문화체육관광부 산하 아르코 후원</div><div class="tl-desc">역사 인물(윤동주, 안중근, 김구) 주제 음악 콘서트 기획·연출·제작 총괄</div></div>
+      <div class="tl-item hl"><div class="tl-dot"></div><div class="tl-year">2025</div><div class="tl-title">통일부 광복80주년 기념 창작 합창곡 작곡 및 음악감독</div><div class="tl-org">대한민국 통일부 · 통하나봄 축제</div><div class="tl-desc">'서로의 별이 되어' 한반도 믹스테이프 음악감독</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2024</div><div class="tl-title">대한민국 청년의날 전문기획위원</div><div class="tl-org">콘서트 파트장</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2023-2024</div><div class="tl-title">지역 브랜딩 OST 프로젝트 기획 및 제작</div><div class="tl-org">북촌한옥마을(아르코 후원) · 남한산성(경기도 후원) · 마포구(마포구 후원)</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2021</div><div class="tl-title">경남FC 웹드라마 버티고슛 OST 음악감독</div><div class="tl-org">문화체육관광부 후원 · 시즌 1, 2 전곡 제작</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2021</div><div class="tl-title">카카오페이지 웹툰 경성빵집 OST 작곡</div><div class="tl-org">카카오페이지 협력 · 전세계 발매</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2018-현재</div><div class="tl-title">멜로틱레코드 설립 및 운영</div><div class="tl-org">음원 제작사 · 저작권협회 기준 76곡 이상 제작 및 발매</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Committee -->
+<section id="committee" style="background:var(--bg2)">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">대외 전문가 활동</h2></div>
+    <div class="cm-grid">
+      <div class="cm-card"><div class="cm-rank">대통령 직속</div><div class="cm-name">민주평화통일자문회의</div><div class="cm-role">관악구 협의회 부회장</div></div>
+      <div class="cm-card"><div class="cm-rank">통일부 장관 직속</div><div class="cm-name">통일미래기획위원회</div><div class="cm-role">기획, 제안, 검토, 심사</div></div>
+      <div class="cm-card"><div class="cm-rank">통일부</div><div class="cm-name">2030자문단</div><div class="cm-role">정책협력 및 홍보분과 위원장 역임</div></div>
+      <div class="cm-card"><div class="cm-rank">서울특별시</div><div class="cm-name">미래서울전략회의</div><div class="cm-role">축제 기획 및 제안, 검토, 심사</div></div>
+      <div class="cm-card"><div class="cm-rank">서울시교육청</div><div class="cm-name">주민참여예산위원회</div><div class="cm-role">3분과 위원장 역임</div></div>
+      <div class="cm-card"><div class="cm-rank">중소벤처기업진흥공단</div><div class="cm-name">창업성공패키지 심사·자문위원</div><div class="cm-role">심사, 자문</div></div>
+      <div class="cm-card"><div class="cm-rank">서울교통공사</div><div class="cm-name">심사 및 자문 위원</div><div class="cm-role">제안, 검토, 심사</div></div>
+      <div class="cm-card"><div class="cm-rank">관악구 · 동작구</div><div class="cm-name">지역 공공 위원회</div><div class="cm-role">관악청년네트워크 부위원장 · 관악청년청 운영위원 · 동작 청년정책위원</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">음악 프로젝트 · 제작 이력</h2></div>
+    <table class="ptable">
+      <thead><tr><th>연도</th><th>프로젝트명</th><th>역할</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr><td class="yr">2025</td><td class="nm">음악토크콘서트 '유산'</td><td class="rl">총감독</td><td class="nt">아르코 후원</td></tr>
+        <tr><td class="yr">2025</td><td class="nm">통일부 창작 합창곡 '서로의 별이 되어'</td><td class="rl">작곡, 음악감독</td><td class="nt">통일부</td></tr>
+        <tr><td class="yr">2024</td><td class="nm">남한산성 로맨스 OST</td><td class="rl">기획·제작</td><td class="nt">경기도 후원</td></tr>
+        <tr><td class="yr">2024</td><td class="nm">북촌한옥마을 로맨스 OST</td><td class="rl">기획·제작</td><td class="nt">아르코 후원</td></tr>
+        <tr><td class="yr">2023</td><td class="nm">영등포구 로맨스 브랜딩 OST</td><td class="rl">기획·제작</td><td class="nt"></td></tr>
+        <tr><td class="yr">2022</td><td class="nm">세상은멜로틱 메타버스 웹드라마</td><td class="rl">기획·제작</td><td class="nt">아주경제 배급</td></tr>
+        <tr><td class="yr">2022</td><td class="nm">마포구 로맨스 OST (경의선숲길)</td><td class="rl">기획·제작</td><td class="nt">마포구 후원</td></tr>
+        <tr><td class="yr">2021</td><td class="nm">경남FC 웹드라마 버티고슛 OST</td><td class="rl">음악감독</td><td class="nt">문체부 후원</td></tr>
+        <tr><td class="yr">2021</td><td class="nm">웹드라마 디지털가족 OST</td><td class="rl">음악감독</td><td class="nt"></td></tr>
+        <tr><td class="yr">2021</td><td class="nm">카카오페이지 웹툰 경성빵집 OST</td><td class="rl">작곡</td><td class="nt">카카오페이지</td></tr>
+        <tr><td class="yr">2020-21</td><td class="nm">실연자연합회 협력 음반 제작</td><td class="rl">프로듀서</td><td class="nt">우수작 선정</td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:2rem"><h3 style="font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.8rem">함께한 아티스트</h3>
+      <div class="art-grid">
+        <div class="art-tag">포커즈 대건 <small>아이돌</small></div><div class="art-tag">포커즈 래현 <small>아이돌</small></div><div class="art-tag">체리블렛 해윤 <small>아이돌</small></div>
+        <div class="art-tag">김민지 <small>슈퍼스타K TOP5</small></div><div class="art-tag">지예송 <small>너목보 우승자</small></div><div class="art-tag">정명규 <small>판타스틱듀오 우승자</small></div>
+        <div class="art-tag">이보람 <small>슈퍼스타K TOP10</small></div><div class="art-tag">희연 <small>새벽공방</small></div><div class="art-tag">오현 <small>밴드 경지</small></div>
+        <div class="art-tag">다율 <small>베이비부</small></div><div class="art-tag">이윤진 <small>무형문화재·국악</small></div><div class="art-tag">류지수</div><div class="art-tag">김꽃</div><div class="art-tag">이성혁</div><div class="art-tag">또아 <small>유튜버</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Music / YouTube -->
+<section id="music" style="background:var(--bg2)">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">대표 음원 · 뮤직비디오</h2></div>
+    <div class="yt-grid">
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/1f00L-uzkCc" allowfullscreen loading="lazy"></iframe><div class="yt-label">해윤 - 별을 노래하는 마음으로 (유산 OST)</div></div>
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/Y_zOXDUyrY8" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건 - For Fight (버티고슛2 OST)</div></div>
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/vXj9qwDbsJQ" allowfullscreen loading="lazy"></iframe><div class="yt-label">보라 - 아스라이달 (경성빵집 OST)</div></div>
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/D7I5HiTKBQ8" allowfullscreen loading="lazy"></iframe><div class="yt-label">지예송 - 우린정말사랑했었을까</div></div>
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/Vw4zWJU1AF8" allowfullscreen loading="lazy"></iframe><div class="yt-label">우유 (김민지) - Freebird</div></div>
+      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/NNk2_7d3wYc" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건, 다율 - 축가</div></div>
+    </div>
+    <div style="text-align:center;margin-top:1.2rem">
+      <a href="https://youtube.com/playlist?list=PLVp0NB5oS84szRFXNgeMa0wjNyb6eq869" target="_blank" style="font-size:.78rem;color:var(--accent);text-decoration:none;font-weight:500">&#9654; 유산 OST 전곡 플레이리스트 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">강의 · 강연 · 교육 활동</h2></div>
+    <div class="edu-grid" style="margin-bottom:1.5rem">
+      <div class="edu-item uni"><div class="edu-marker"></div><div><div class="edu-name">서울시립대학교 100주년 기념관</div><div class="edu-detail">정규 강좌 운영</div></div></div>
+      <div class="edu-item uni"><div class="edu-marker"></div><div><div class="edu-name">경희대학교 국제캠퍼스</div><div class="edu-detail">강의 진행</div></div></div>
+    </div>
+    <div class="lec-cats">
+      <div class="lec-cat"><h4>성인 대상 평생학습 정규 강좌 (20대~70대)</h4><ul>
+        <li>강남구 평생학습센터 (2023~)</li><li>서초구 평생학습관 (2025~)</li><li>서대문구 융복합인재교육센터 (2026~)</li>
+        <li>구로구 평생학습센터 / 동네배움터 (2023~)</li><li>강동구 50플러스센터 (2025~)</li><li>강서구 50플러스센터</li>
+        <li>인천광역시 평생학습관</li><li>경기도 구리시 갈매평생학습센터</li><li>경기도 광명시 인생플러스센터</li>
+        <li>서울시민대학 정규 강좌</li><li>클래스101 제안 강좌 운영</li>
+      </ul></div>
+      <div class="lec-cat"><h4>기관 · 기업 · 청년센터 출강</h4><ul>
+        <li>현대백화점그룹 인재개발원</li><li>MG 새마을금고</li><li>강북오랑(청년센터) 청년도전지원사업</li>
+        <li>마포청년센터(마포오랑)</li><li>동작청년센터</li><li>부평테크시티 청년도전지원사업</li>
+        <li>유유기지 부평 강의 및 멘토링</li><li>수원시 월간진로의날</li><li>의정부 청소년 진로페스티벌</li>
+        <li>서래초, 교대부속초, 서초중, 이화금란중 등 다수</li>
+      </ul></div>
+    </div>
+    <div class="courses">
+      <div class="course-card"><div class="course-num">COURSE 01</div><div class="course-name">음악감독과<br>스마트폰 작곡 도전!</div></div>
+      <div class="course-card"><div class="course-num">COURSE 02</div><div class="course-name">음악감독과<br>K-POP 작사 도전!</div></div>
+      <div class="course-card"><div class="course-num">COURSE 03</div><div class="course-name">음악감독과<br>AI 작곡 도전!</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Credentials -->
+<section id="credentials" style="background:var(--bg2)">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">자격 · 이수 · 등록 사항</h2></div>
+    <div class="cred-list">
+      <div class="cred-item"><span class="cred-num">01</span><span class="cred-text">대중문화예술기획업 수료 <small>한국콘텐츠진흥원</small></span></div>
+      <div class="cred-item"><span class="cred-num">02</span><span class="cred-text">한국예술인복지재단 예술인 증명</span></div>
+      <div class="cred-item"><span class="cred-num">03</span><span class="cred-text">지역문화기획자 디딤 2기 수료 <small>동작문화재단</small></span></div>
+      <div class="cred-item"><span class="cred-num">04</span><span class="cred-text">일일명예교사 위촉 <small>신동중학교장</small></span></div>
+      <div class="cred-item"><span class="cred-num">05</span><span class="cred-text">한국음악저작권협회 준회원 <small>2018~</small></span></div>
+      <div class="cred-item"><span class="cred-num">06</span><span class="cred-text">한국음악실연자연합회 회원 <small>2019~</small></span></div>
+      <div class="cred-item"><span class="cred-num">07</span><span class="cred-text">한국미디협회 회원</span></div>
+      <div class="cred-item"><span class="cred-num">08</span><span class="cred-text">심리상담사 <small>한국직업능력진흥원</small></span></div>
+      <div class="cred-item"><span class="cred-num">09</span><span class="cred-text">구로구 평생교육강사 전문화 연수 수료 <small>서울시</small></span></div>
+      <div class="cred-item"><span class="cred-num">10</span><span class="cred-text">서울시 청년 강사 성장과정 수료 <small>서울시·서울청년대학</small></span></div>
+      <div class="cred-item"><span class="cred-num">11</span><span class="cred-text">예술인 계약 및 저작권교육 수료 <small>한국음악저작권협회</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2>협업 · 강의 · 제작 문의</h2>
+  <p>문화예술 특강, 직업인 강연, AI 기반 창작 워크숍,<br>공공·학교·기관 대상 음악 콘텐츠 강의,<br>음원 제작, 음악감독 업무, 콘서트 기획이 필요하신 경우 연락 주십시오.</p>
+  <a href="mailto:dlrnjsrlwkd&#64;naver.com" class="cta-btn">dlrnjsrlwkd&#64;naver.com</a>
+  <div class="cta-fields"><div class="cta-field"><strong>윤영준</strong> 음악감독</div><div class="cta-field"><strong>멜로틱레코드</strong> 대표</div></div>
+</section>
+
+<footer>&#169; 2026 윤영준 · 멜로틱레코드. All rights reserved.</footer>
+
+<script>
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.08});
+var r=document.querySelectorAll('.reveal');for(var i=0;i<r.length;i++)o.observe(r[i]);
+</script>
+</body>
+</html>
