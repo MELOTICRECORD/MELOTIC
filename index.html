@@ -3,228 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>윤영준 | 멜로틱 레코드 - 음악감독 &amp; 콘텐츠 디렉터</title>
+<title>멜로틱 레코드 | 음원 제작 전문 - OST K-POP 브랜딩송</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#08080f;--bg2:#0e0e1a;--card:#13132a;--card2:#1a1a38;--accent:#e94560;--accent2:#ff6b81;--gold:#f5c518;--white:#f0f0f5;--gray:#8888a8;--gray2:#55556e}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--white);line-height:1.7;overflow-x:hidden}
+:root{--bg:#08080f;--bg2:#0e0e1a;--card:#13132a;--accent:#e94560;--accent2:#ff6b81;--gold:#f5c518;--white:#f0f0f5;--gray:#8888a8;--gray2:#55556e}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--white);line-height:1.7;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
-img{max-width:100%;height:auto;display:block}
-
-.hero{min-height:100vh;display:flex;align-items:center;padding:2rem;position:relative;overflow:hidden;gap:3rem;justify-content:center;flex-wrap:wrap}
-.hero::before{content:'';position:absolute;top:-30%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(233,69,96,.08) 0%,transparent 70%);pointer-events:none}
-.hero-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:3px solid rgba(233,69,96,.3);flex-shrink:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.hero-content{max-width:520px}
-.hero-label{font-family:'Outfit',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s ease forwards .3s}
-.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;line-height:1.25;margin-bottom:1rem;opacity:0;animation:fadeUp .8s ease forwards .5s}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:clamp(.85rem,2vw,1rem);color:var(--gray);max-width:520px;margin-bottom:2rem;font-weight:300;opacity:0;animation:fadeUp .8s ease forwards .7s}
-.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease forwards .9s}
-.stat-num{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;line-height:1.1}.stat-num span{color:var(--accent)}
-.stat-label{font-size:.7rem;color:var(--gray);margin-top:.15rem}
-
-section{padding:4.5rem 2rem}.sec{max-width:950px;margin:0 auto}
-.sec-label{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}
-.sec-title{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;margin-bottom:2.5rem;line-height:1.3}
-
-/* Photo Gallery */
-.photo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:3rem}
-.photo-grid.two{grid-template-columns:1fr 1fr}
-.photo-item{position:relative;overflow:hidden;aspect-ratio:16/10;border:1px solid rgba(255,255,255,.04)}
-.photo-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.photo-item:hover img{transform:scale(1.05)}
-.photo-item .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:.7rem .5rem .4rem;font-size:.65rem;color:rgba(255,255,255,.8)}
-
-/* About Cards */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.about-card{background:var(--card);border:1px solid rgba(255,255,255,.04);padding:1.6rem;transition:transform .3s,border-color .3s}
-.about-card:hover{transform:translateY(-3px);border-color:rgba(233,69,96,.2)}
-.about-card h3{font-size:.9rem;font-weight:700;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
-.about-card h3::before{content:'';display:block;width:3px;height:14px;background:var(--accent);flex-shrink:0}
-.about-card p{font-size:.8rem;color:var(--gray);font-weight:300;line-height:1.7}
-
-/* Awards */
-.awards{background:var(--card);padding:2rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}
-.aw-item{text-align:center;max-width:160px}.aw-year{font-family:'Outfit',sans-serif;font-size:.62rem;color:var(--gold);letter-spacing:2px;font-weight:600}
-.aw-name{font-size:.75rem;font-weight:500;margin-top:.2rem}
-
-/* Projects */
-.project{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:start}
-.project:last-child{border-bottom:none}
-.project-num{font-family:'Outfit',sans-serif;font-size:2.5rem;font-weight:800;color:rgba(233,69,96,.15);line-height:1;min-width:50px}
-.project-info h3{font-size:1.1rem;font-weight:700;margin-bottom:.15rem}.project-type{font-size:.68rem;color:var(--accent);font-weight:500;letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem}
-.project-desc{font-size:.82rem;color:var(--gray);font-weight:300;margin-bottom:.8rem;line-height:1.7}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem}.tag{font-size:.62rem;padding:.25rem .6rem;border:1px solid rgba(255,255,255,.08);color:var(--gray)}.tag.hl{border-color:var(--gold);color:var(--gold)}
-
-/* YouTube */
-.yt-section{background:var(--bg2)}
-.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.yt-card{background:var(--card);border:1px solid rgba(255,255,255,.04);overflow:hidden}
-.yt-card iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
-.yt-label{padding:.5rem .7rem;font-size:.72rem;color:var(--gray)}
-.yt-link{text-align:center;margin-top:1rem}.yt-link a{font-size:.75rem;color:var(--accent);text-decoration:none;font-weight:500}
-
-/* Artists */
-.art-chips{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{font-size:.72rem;padding:.4rem .9rem;background:var(--card);border:1px solid rgba(255,255,255,.04);transition:border-color .3s}
-.chip:hover{border-color:var(--accent)}.chip small{color:var(--gray);font-size:.62rem;margin-left:.2rem}
-
-/* Services */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.svc-card{background:var(--card);padding:1.6rem 1.3rem;border:1px solid rgba(255,255,255,.04);border-top:2px solid var(--accent);transition:transform .3s}
-.svc-card:nth-child(2){border-top-color:var(--gold)}.svc-card:nth-child(3){border-top-color:var(--accent2)}
-.svc-card:hover{transform:translateY(-4px)}.svc-card h3{font-size:.95rem;font-weight:700;margin-bottom:.6rem}
-.svc-card p{font-size:.78rem;color:var(--gray);font-weight:300;line-height:1.7}
-
-/* CTA */
-.cta{text-align:center;padding:5rem 2rem;position:relative}
-.cta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(233,69,96,.06) 0%,transparent 70%);pointer-events:none}
-.cta h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-bottom:.8rem}
-.cta p{font-size:.88rem;color:var(--gray);font-weight:300;margin-bottom:2rem}
-.cta-btn{display:inline-block;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;color:var(--white);text-decoration:none;padding:.9rem 2.2rem;background:var(--accent);transition:all .3s;letter-spacing:1px}
-.cta-btn:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(233,69,96,.3)}
-.cta-sub{margin-top:1.2rem;font-size:.72rem;color:var(--gray2)}
-
-footer{padding:1.5rem 2rem;text-align:center;font-size:.65rem;color:var(--gray2);border-top:1px solid rgba(255,255,255,.03)}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:768px){
-.hero{flex-direction:column;text-align:center}.hero-stats{justify-content:center}
-.about-grid,.yt-grid{grid-template-columns:1fr}.svc-grid{grid-template-columns:1fr}
-.photo-grid,.photo-grid.two{grid-template-columns:1fr}.project{grid-template-columns:1fr;gap:.3rem}
-.awards{gap:1.2rem}
-}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}img{max-width:100%;height:auto;display:block}
+.nav-bar{background:rgba(8,8,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.04);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}.nav-logo{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:var(--white);padding:.85rem 0;letter-spacing:1px}.nav-logo span{color:var(--accent)}.nav-links{display:flex;gap:0;list-style:none}.nav-links a{display:block;padding:.85rem 1rem;font-size:.72rem;color:var(--gray);text-decoration:none;font-weight:500;letter-spacing:.5px;transition:color .3s}.nav-links a:hover{color:var(--white)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:2rem;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:-20%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(233,69,96,.07) 0%,transparent 70%);pointer-events:none}.hero-inner{max-width:900px;margin:0 auto;width:100%}.hero-label{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;opacity:0;animation:fadeUp .8s ease forwards .3s}.hero h1{font-size:clamp(2.2rem,5.5vw,3.5rem);font-weight:900;line-height:1.2;margin-bottom:.8rem;opacity:0;animation:fadeUp .8s ease forwards .5s}.hero h1 em{font-style:normal;color:var(--accent)}.hero-desc{font-size:clamp(.88rem,1.8vw,1.05rem);color:var(--gray);max-width:620px;font-weight:300;line-height:1.8;margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s ease forwards .7s}.hero-pills{display:flex;flex-wrap:wrap;gap:.5rem;opacity:0;animation:fadeUp .8s ease forwards .9s}.pill{font-size:.72rem;font-weight:500;padding:.45rem 1rem;border:1px solid rgba(233,69,96,.25);color:var(--white);background:rgba(233,69,96,.08);letter-spacing:.3px;transition:all .3s}.pill:hover{background:rgba(233,69,96,.18);border-color:var(--accent)}.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:3rem;opacity:0;animation:fadeUp .8s ease forwards 1.1s}.stat-num{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;line-height:1.1}.stat-num span{color:var(--accent)}.stat-label{font-size:.68rem;color:var(--gray);margin-top:.15rem}.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--gray2);font-size:.6rem;letter-spacing:2px;opacity:0;animation:fadeUp .8s ease forwards 1.4s}.scroll-line{width:1px;height:35px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollP 2s ease-in-out infinite}
+section{padding:5rem 2rem}.sec{max-width:950px;margin:0 auto}.sec-label{font-family:'Outfit',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}.sec-title{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;margin-bottom:1rem;line-height:1.3}.sec-desc{font-size:.88rem;color:var(--gray);font-weight:300;max-width:620px;margin-bottom:2.5rem}
+.svc-grid-main{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}.svc-grid-sub{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}.svc-card{background:var(--card);border:1px solid rgba(255,255,255,.04);padding:1.8rem 1.5rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}.svc-card:hover{transform:translateY(-4px);border-color:rgba(233,69,96,.15)}.svc-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px}.c1::before{background:var(--accent)}.c2::before{background:var(--gold)}.c3::before{background:var(--accent2)}.c4::before{background:#6c5ce7}.c5::before{background:#00b894}.c6::before{background:#fd79a8}.c7::before{background:#0984e3}.svc-num{font-family:'Outfit',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:2px;margin-bottom:.5rem}.c1 .svc-num{color:var(--accent)}.c2 .svc-num{color:var(--gold)}.c3 .svc-num{color:var(--accent2)}.c4 .svc-num{color:#a29bfe}.c5 .svc-num{color:#00b894}.c6 .svc-num{color:#fd79a8}.c7 .svc-num{color:#74b9ff}.svc-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}.svc-card p{font-size:.78rem;color:var(--gray);font-weight:300;line-height:1.7}.svc-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.7rem}.svc-tag{font-size:.58rem;padding:.2rem .45rem;border:1px solid rgba(255,255,255,.06);color:var(--gray2)}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem}.photo-grid.three{grid-template-columns:1fr 1fr 1fr}.photo-item{position:relative;overflow:hidden;aspect-ratio:16/10;border:1px solid rgba(255,255,255,.04)}.photo-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.photo-item:hover img{transform:scale(1.04)}.photo-item .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:.6rem .5rem .4rem;font-size:.63rem;color:rgba(255,255,255,.8)}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.proj-card{background:var(--card);border:1px solid rgba(255,255,255,.04);padding:1.4rem;transition:border-color .3s}.proj-card:hover{border-color:rgba(233,69,96,.15)}.proj-type{font-size:.58rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}.proj-card h3{font-size:.92rem;font-weight:700;margin-bottom:.25rem}.proj-card p{font-size:.76rem;color:var(--gray);font-weight:300;line-height:1.6;margin-bottom:.5rem}.tags{display:flex;flex-wrap:wrap;gap:.3rem}.tag{font-size:.56rem;padding:.2rem .45rem;border:1px solid rgba(255,255,255,.06);color:var(--gray2)}.tag.hl{border-color:var(--gold);color:var(--gold)}
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.yt-card{background:var(--card);border:1px solid rgba(255,255,255,.04);overflow:hidden}.yt-card iframe{width:100%;aspect-ratio:16/9;border:none;display:block}.yt-label{padding:.5rem .7rem;font-size:.7rem;color:var(--gray)}.yt-link{text-align:center;margin-top:1rem}.yt-link a{font-size:.72rem;color:var(--accent);text-decoration:none;font-weight:500}
+.process-row{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}.step{background:var(--card);border:1px solid rgba(255,255,255,.04);padding:1.2rem .9rem;text-align:center;position:relative}.step-num{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:rgba(233,69,96,.2);margin-bottom:.2rem}.step-name{font-size:.78rem;font-weight:700;margin-bottom:.2rem}.step-desc{font-size:.66rem;color:var(--gray);font-weight:300;line-height:1.5}.step-arrow{position:absolute;right:-.5rem;top:50%;transform:translateY(-50%);font-size:.75rem;color:var(--gray2);z-index:1}
+.art-chips{display:flex;flex-wrap:wrap;gap:.4rem}.chip{font-size:.7rem;padding:.35rem .8rem;background:var(--card);border:1px solid rgba(255,255,255,.04);transition:border-color .3s}.chip:hover{border-color:var(--accent)}.chip small{color:var(--gray);font-size:.6rem;margin-left:.2rem}
+.ceo{display:flex;gap:2rem;align-items:center;flex-wrap:wrap}.ceo-photo{width:170px;height:170px;border-radius:50%;overflow:hidden;border:2px solid rgba(233,69,96,.2);flex-shrink:0}.ceo-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}.ceo-info{flex:1;min-width:280px}.ceo-name{font-size:1.15rem;font-weight:700;margin-bottom:.2rem}.ceo-role{font-size:.78rem;color:var(--accent);font-weight:500;margin-bottom:.8rem}.ceo-desc{font-size:.82rem;color:var(--gray);font-weight:300;line-height:1.8;margin-bottom:1rem}.ceo-creds{display:flex;flex-wrap:wrap;gap:.4rem}.cred{font-size:.63rem;padding:.3rem .6rem;background:rgba(255,255,255,.04);color:var(--gray)}
+.cta{text-align:center;padding:5rem 2rem;position:relative}.cta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(233,69,96,.06) 0%,transparent 70%);pointer-events:none}.cta h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-bottom:.5rem}.cta p{font-size:.85rem;color:var(--gray);font-weight:300;margin-bottom:2rem;line-height:1.7}.cta-btn{display:inline-block;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;color:var(--white);text-decoration:none;padding:.9rem 2.2rem;background:var(--accent);transition:all .3s;letter-spacing:1px}.cta-btn:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(233,69,96,.3)}.cta-sub{margin-top:1rem;font-size:.7rem;color:var(--gray2)}
+footer{padding:1.5rem 2rem;text-align:center;font-size:.63rem;color:var(--gray2);border-top:1px solid rgba(255,255,255,.03)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes scrollP{0%,100%{opacity:.3}50%{opacity:.8}}.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.nav-links{display:none}.svc-grid-main,.svc-grid-sub,.project-grid,.yt-grid{grid-template-columns:1fr}.process-row{grid-template-columns:1fr 1fr;gap:.5rem}.step-arrow{display:none}.photo-grid,.photo-grid.three{grid-template-columns:1fr}.hero-stats{gap:1.5rem}.ceo{flex-direction:column;text-align:center}.ceo-creds{justify-content:center}}
 </style>
 </head>
 <body>
+<nav class="nav-bar"><div class="nav-logo"><span>M</span>ELOTIC RECORD</div><ul class="nav-links"><li><a href="#services">서비스</a></li><li><a href="#work">제작 실적</a></li><li><a href="#music">음원</a></li><li><a href="#process">프로세스</a></li><li><a href="#ceo">대표 소개</a></li><li><a href="#contact">문의</a></li></ul></nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-photo"><img src="images/profile1.jpg" alt="윤영준"></div>
-  <div class="hero-content">
-    <div class="hero-label">Music Director &amp; Content Director</div>
-    <h1>음악이 콘텐츠의<br><em>감정을 완성</em>합니다</h1>
-    <p class="hero-sub">음악감독 윤영준 · 멜로틱 레코드 대표<br>기획부터 작곡 · 녹음 · 유통까지, 음원 제작의 모든 것을 한 곳에서.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">76<span>+</span></div><div class="stat-label">저작권협회 공식 등록곡</div></div>
-      <div class="stat"><div class="stat-num">7<span>+</span></div><div class="stat-label">OST 프로젝트</div></div>
-      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">정규 출강 기관</div></div>
-      <div class="stat"><div class="stat-num">2.6K<span>+</span></div><div class="stat-label">커뮤니티 회원</div></div>
-    </div>
-  </div>
-</section>
+<section class="hero"><div class="hero-inner">
+<div class="hero-label">Music Production Company</div>
+<h1>기획부터 유통까지,<br><em>음원 제작</em>의 모든 것</h1>
+<p class="hero-desc">멜로틱 레코드는 OST, K-POP, 아티스트 맞춤 제작, 브랜딩 송, 콘서트, 광고음악, 음악 교육까지 아우르는 음원 제작 전문 회사입니다. 기획 · 작곡 · 녹음 · 프로듀싱 · 유통을 원스톱으로 제공합니다.</p>
+<div class="hero-pills"><div class="pill">OST 제작</div><div class="pill">K-POP 제작</div><div class="pill">아티스트 맞춤 제작</div><div class="pill">브랜딩 송 제작</div><div class="pill">콘서트 제작</div><div class="pill">광고음악 제작</div><div class="pill">음악창작교육</div></div>
+<div class="hero-stats"><div class="stat"><div class="stat-num">76<span>+</span></div><div class="stat-label">공식 발매곡 (저작권협회)</div></div><div class="stat"><div class="stat-num">7<span>+</span></div><div class="stat-label">OST 프로젝트</div></div><div class="stat"><div class="stat-num">15<span>+</span></div><div class="stat-label">협력 아티스트</div></div><div class="stat"><div class="stat-num">2.6K<span>+</span></div><div class="stat-label">커뮤니티 회원</div></div></div>
+</div><div class="scroll-hint"><div class="scroll-line"></div>SCROLL</div></section>
 
-<!-- Awards -->
-<div class="awards">
-  <div class="aw-item"><div class="aw-year">2025</div><div class="aw-name">통일부 장관 표창</div></div>
-  <div class="aw-item"><div class="aw-year">2025</div><div class="aw-name">서울시 교육감 표창</div></div>
-  <div class="aw-item"><div class="aw-year">2024</div><div class="aw-name">동작문화재단 이사장 표창</div></div>
-  <div class="aw-item"><div class="aw-year">2025</div><div class="aw-name">광복80주년 콘서트 총감독</div></div>
+<section id="services" style="background:var(--bg2)"><div class="sec reveal">
+<div class="sec-label">Services</div><h2 class="sec-title">핵심 제작 분야</h2>
+<p class="sec-desc">멜로틱 레코드는 콘텐츠의 목적에 맞는 최적의 음악을 만듭니다. 기획 의도 파악부터 최종 유통까지 전 과정을 총괄합니다.</p>
+<div class="svc-grid-main">
+<div class="svc-card c1"><div class="svc-num">SERVICE 01</div><h3>OST 제작</h3><p>웹드라마, 웹툰, 영화, 숏폼 콘텐츠의 감정을 음악으로 완성합니다. 프로젝트 규모와 목적에 맞춰 유연한 협업 구조를 제안드립니다.</p><div class="svc-tags"><span class="svc-tag">웹드라마</span><span class="svc-tag">웹툰</span><span class="svc-tag">영화</span><span class="svc-tag">숏폼</span></div></div>
+<div class="svc-card c2"><div class="svc-num">SERVICE 02</div><h3>K-POP 제작</h3><p>아이돌, 오디션 출신 아티스트의 음반 기획 및 프로듀싱. 작곡부터 녹음, 믹싱, 마스터링, 전세계 유통까지.</p><div class="svc-tags"><span class="svc-tag">아이돌</span><span class="svc-tag">싱글</span><span class="svc-tag">미니앨범</span><span class="svc-tag">프로듀싱</span></div></div>
+<div class="svc-card c3"><div class="svc-num">SERVICE 03</div><h3>아티스트 맞춤 제작</h3><p>인디 아티스트, 신인 가수, 유튜버 등 개인 아티스트의 첫 음반부터 정규 앨범까지. 아티스트의 색에 맞는 곡을 함께 만듭니다.</p><div class="svc-tags"><span class="svc-tag">인디</span><span class="svc-tag">신인 발굴</span><span class="svc-tag">커스텀 제작</span><span class="svc-tag">데뷔 지원</span></div></div>
+<div class="svc-card c4"><div class="svc-num">SERVICE 04</div><h3>브랜딩 송 제작</h3><p>지역, 기업, 브랜드를 음악으로 각인시킵니다. 북촌한옥마을, 남한산성, 마포구 등 지역 브랜딩 OST 제작 경험 보유.</p><div class="svc-tags"><span class="svc-tag">지역 브랜딩</span><span class="svc-tag">기업 테마곡</span><span class="svc-tag">캠페인</span><span class="svc-tag">지자체</span></div></div>
 </div>
+<div class="svc-grid-sub">
+<div class="svc-card c5"><div class="svc-num">SERVICE 05</div><h3>콘서트 제작</h3><p>음악토크콘서트, 페스티벌, 지역 문화행사의 기획 · 연출 · 음악감독. 광복80주년 콘서트 총감독 경험.</p><div class="svc-tags"><span class="svc-tag">토크콘서트</span><span class="svc-tag">페스티벌</span><span class="svc-tag">공연 연출</span></div></div>
+<div class="svc-card c6"><div class="svc-num">SERVICE 06</div><h3>광고음악 제작</h3><p>브랜드 광고, CM송, 캠페인 영상에 최적화된 음악을 제작합니다. 짧은 호흡 안에 브랜드를 각인시키는 사운드 설계.</p><div class="svc-tags"><span class="svc-tag">CM송</span><span class="svc-tag">광고 BGM</span><span class="svc-tag">캠페인</span></div></div>
+<div class="svc-card c7"><div class="svc-num">SERVICE 07</div><h3>음악창작교육 운영</h3><p>작곡, 작사, AI 작곡 실습형 교육 프로그램 운영. 스마트폰 기반 커리큘럼으로 전문 장비 없이도 창작 가능.</p><div class="svc-tags"><span class="svc-tag">작곡</span><span class="svc-tag">작사</span><span class="svc-tag">AI 작곡</span><span class="svc-tag">스마트폰 작곡</span></div></div>
+</div>
+</div></section>
 
-<!-- Photo Gallery -->
-<section>
-  <div class="sec reveal">
-    <div class="photo-grid two">
-      <div class="photo-item"><img src="images/concert1.jpg" alt="공연"><div class="cap">광복80주년 기념 음악토크콘서트 '유산' (2025)</div></div>
-      <div class="photo-item"><img src="images/concert2.jpg" alt="단체"><div class="cap">콘서트 '유산' 출연진과 함께</div></div>
-    </div>
-    <div class="photo-grid">
-      <div class="photo-item"><img src="images/studio.jpg" alt="스튜디오"><div class="cap">음원 제작 스튜디오</div></div>
-      <div class="photo-item"><img src="images/lecture.jpg" alt="강의"><div class="cap">강의 현장</div></div>
-      <div class="photo-item"><img src="images/albums.jpg" alt="앨범"><div class="cap">멜로틱 발매 앨범</div></div>
-    </div>
-  </div>
-</section>
+<section><div class="sec reveal">
+<div class="photo-grid"><div class="photo-item"><img src="images/concert1.jpg" alt="공연"><div class="cap">광복80주년 기념 음악토크콘서트 '유산' (2025)</div></div><div class="photo-item"><img src="images/concert2.jpg" alt="단체"><div class="cap">콘서트 '유산' 출연진 &amp; 제작팀</div></div></div>
+<div class="photo-grid three"><div class="photo-item"><img src="images/studio.jpg" alt="스튜디오"><div class="cap">멜로틱 음원 제작 스튜디오</div></div><div class="photo-item"><img src="images/lecture.jpg" alt="강의"><div class="cap">음악 교육 현장</div></div><div class="photo-item"><img src="images/albums.jpg" alt="앨범"><div class="cap">멜로틱 발매 앨범</div></div></div>
+</div></section>
 
-<!-- About -->
-<section style="background:var(--bg2)">
-  <div class="sec reveal">
-    <div class="sec-label">About</div>
-    <h2 class="sec-title">한 곳에서 끝나는<br>음악 제작 시스템</h2>
-    <div class="about-grid">
-      <div class="about-card"><h3>음원 제작사</h3><p>작곡·작사·편곡·프로듀싱·믹싱·마스터링·유통까지 원스톱 제작. 아이돌부터 인디 아티스트, OST까지 전 장르.</p></div>
-      <div class="about-card"><h3>콘텐츠 디렉팅</h3><p>웹드라마·웹툰·지역 브랜딩·공공 프로젝트의 음악 기획 및 총괄 연출. 기획 의도에 맞는 음악 디렉팅.</p></div>
-      <div class="about-card"><h3>교육 &amp; 강연</h3><p>서울시립대·경희대 외래교수. 전국 10개+ 공공기관 정규 출강. AI 작곡·K-POP 작사 실습형 커리큘럼.</p></div>
-      <div class="about-card"><h3>공공 &amp; 대외활동</h3><p>대통령 직속 민주평통 부회장, 통일부 자문위원, 서울시 미래전략회의 위원.</p></div>
-    </div>
-  </div>
-</section>
+<section id="work" style="background:var(--bg2)"><div class="sec reveal">
+<div class="sec-label">Work</div><h2 class="sec-title">제작 실적</h2>
+<p class="sec-desc">정부 기관, 프로 스포츠 구단, 대형 웹툰 플랫폼까지. 다양한 분야의 클라이언트와 함께했습니다.</p>
+<div class="project-grid">
+<div class="proj-card"><div class="proj-type">콘서트 · 총감독</div><h3>광복80주년 음악토크콘서트 '유산'</h3><p>기획 · 연출 · 제작 총괄. 체리블렛 해윤 참여. 윤동주, 안중근, 김구를 주제로 한 역사 음악 콘서트.</p><div class="tags"><span class="tag hl">문체부 아르코 후원</span><span class="tag hl">통일부 장관 표창</span></div></div>
+<div class="proj-card"><div class="proj-type">창작곡 · 음악감독</div><h3>통일부 광복80주년 창작 합창곡</h3><p>대한민국의 가치를 담은 창작 합창곡 '서로의 별이 되어' 작곡 및 음악감독. 시민 80인의 목소리를 담아 제작.</p><div class="tags"><span class="tag hl">대한민국 통일부</span><span class="tag">시민 80인 합창</span><span class="tag">한반도 믹스테이프</span></div></div>
+<div class="proj-card"><div class="proj-type">OST · 음악감독</div><h3>경남FC 웹드라마 '버티고슛'</h3><p>프로축구단 공식 웹드라마 시즌 1 · 2 OST 전곡 제작. 아이돌 포커즈 김대건 참여.</p><div class="tags"><span class="tag hl">문화체육관광부 후원</span><span class="tag">시즌 1 · 2</span></div></div>
+<div class="proj-card"><div class="proj-type">브랜딩 송</div><h3>북촌한옥마을 · 남한산성 로맨스 OST</h3><p>지역 명소를 음악으로 브랜딩. 작사 공모 100여건 흥행. 뮤직비디오 제작.</p><div class="tags"><span class="tag hl">아르코 · 경기도 후원</span><span class="tag">언론 보도</span></div></div>
+<div class="proj-card"><div class="proj-type">OST · 작곡</div><h3>카카오페이지 웹툰 '경성빵집' OST</h3><p>카카오페이지 인기 웹툰 OST 작곡 참여. 전세계 발매.</p><div class="tags"><span class="tag">카카오페이지</span><span class="tag">전세계 발매</span></div></div>
+<div class="proj-card"><div class="proj-type">K-POP · 프로듀싱</div><h3>K-POP 아티스트 음반 제작 다수</h3><p>아이돌 포커즈, 슈퍼스타K TOP5 김민지, 너목보 우승자 지예송, 판타스틱듀오 우승자 정명규 등.</p><div class="tags"><span class="tag">아이돌</span><span class="tag">오디션 우승자</span><span class="tag">76곡+</span></div></div>
+<div class="proj-card"><div class="proj-type">브랜딩 송</div><h3>마포구 로맨스 · 영등포구 브랜딩 OST</h3><p>경의선숲길, 영등포구를 배경으로 한 지역 브랜딩 음원 기획 및 제작.</p><div class="tags"><span class="tag hl">마포구 후원</span><span class="tag">작사 공모전</span></div></div>
+<div class="proj-card"><div class="proj-type">OST · 음악감독</div><h3>웹드라마 '디지털가족' OST</h3><p>웹드라마 디지털가족 OST 전곡 기획 · 제작 · 음악감독. 전세계 발매.</p><div class="tags"><span class="tag">웹드라마 OST</span><span class="tag">음악감독</span></div></div>
+</div>
+</div></section>
 
-<!-- Portfolio -->
-<section>
-  <div class="sec reveal">
-    <div class="sec-label">Portfolio</div>
-    <h2 class="sec-title">주요 프로젝트</h2>
-    <div class="project"><div class="project-num">01</div><div class="project-info"><h3>광복 80주년 기념 음악토크콘서트 '유산'</h3><div class="project-type">총감독 · 2025</div><p class="project-desc">윤동주, 안중근, 김구를 주제로 한 역사 음악 콘서트. 기획·연출·제작 총괄. 체리블렛 해윤 참여.</p><div class="tags"><span class="tag hl">문체부 아르코 후원</span><span class="tag hl">통일부 장관 표창</span><span class="tag">국악 크로스오버</span></div></div></div>
-    <div class="project"><div class="project-num">02</div><div class="project-info"><h3>경남FC 웹드라마 '버티고슛' OST</h3><div class="project-type">음악감독 · 2021</div><p class="project-desc">경남FC 프로축구단 공식 웹드라마 시즌 1·2 OST 전곡 기획 및 제작. 아이돌 포커즈 김대건 참여.</p><div class="tags"><span class="tag hl">문화체육관광부 후원</span><span class="tag">웹드라마 OST</span></div></div></div>
-    <div class="project"><div class="project-num">03</div><div class="project-info"><h3>북촌한옥마을 · 남한산성 로맨스 OST</h3><div class="project-type">지역 브랜딩 OST · 2023-2024</div><p class="project-desc">지역 명소를 음악으로 브랜딩. 작사 공모 100여건 흥행. 퓨전 국악 뮤직비디오 제작.</p><div class="tags"><span class="tag hl">아르코·경기도 후원</span><span class="tag">언론 보도</span><span class="tag">MV 제작</span></div></div></div>
-    <div class="project"><div class="project-num">04</div><div class="project-info"><h3>카카오페이지 웹툰 '경성빵집' OST</h3><div class="project-type">작곡 참여 · 2021</div><p class="project-desc">카카오페이지 인기 웹툰 경성빵집의 OST 작곡 참여. 전세계 발매.</p><div class="tags"><span class="tag">웹툰 OST</span><span class="tag">카카오페이지</span></div></div></div>
-  </div>
-</section>
+<section id="music"><div class="sec reveal">
+<div class="sec-label">Music</div><h2 class="sec-title">대표 음원 · 뮤직비디오</h2>
+<div class="yt-grid">
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/1f00L-uzkCc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">해윤 - 별을 노래하는 마음으로 (유산 OST)</div></div>
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/Y_zOXDUyrY8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건 - For Fight (버티고슛2 OST)</div></div>
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/vXj9qwDbsJQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">보라 - 아스라이달 (경성빵집 OST)</div></div>
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/D7I5HiTKBQ8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">지예송 - 우린정말사랑했었을까</div></div>
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/Vw4zWJU1AF8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">우유 (김민지) - Freebird</div></div>
+<div class="yt-card"><iframe src="https://www.youtube.com/embed/NNk2_7d3wYc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건, 다율 - 축가</div></div>
+</div>
+<div class="yt-link"><a href="https://youtube.com/playlist?list=PLVp0NB5oS84szRFXNgeMa0wjNyb6eq869" target="_blank">&#9654; 유산 OST 전곡 플레이리스트 보기</a></div>
+</div></section>
 
-<!-- YouTube -->
-<section class="yt-section">
-  <div class="sec reveal">
-    <div class="sec-label">Music</div>
-    <h2 class="sec-title">대표 음원 · 뮤직비디오</h2>
-    <div class="yt-grid">
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/1f00L-uzkCc" allowfullscreen loading="lazy"></iframe><div class="yt-label">해윤 - 별을 노래하는 마음으로 (유산 OST)</div></div>
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/Y_zOXDUyrY8" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건 - For Fight (버티고슛2 OST)</div></div>
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/vXj9qwDbsJQ" allowfullscreen loading="lazy"></iframe><div class="yt-label">보라 - 아스라이달 (경성빵집 OST)</div></div>
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/D7I5HiTKBQ8" allowfullscreen loading="lazy"></iframe><div class="yt-label">지예송 - 우린정말사랑했었을까</div></div>
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/Vw4zWJU1AF8" allowfullscreen loading="lazy"></iframe><div class="yt-label">우유 (김민지) - Freebird</div></div>
-      <div class="yt-card"><iframe src="https://www.youtube-nocookie.com/embed/NNk2_7d3wYc" allowfullscreen loading="lazy"></iframe><div class="yt-label">김대건, 다율 - 축가</div></div>
-    </div>
-    <div class="yt-link"><a href="https://youtube.com/playlist?list=PLVp0NB5oS84szRFXNgeMa0wjNyb6eq869" target="_blank">&#9654; 유산 OST 전곡 플레이리스트 보기</a></div>
-  </div>
-</section>
+<section id="process" style="background:var(--bg2)"><div class="sec reveal">
+<div class="sec-label">Process</div><h2 class="sec-title">제작 프로세스</h2>
+<p class="sec-desc">의뢰부터 전세계 발매까지, 평균 3~6개월 내에 완성합니다.</p>
+<div class="process-row">
+<div class="step"><div class="step-num">01</div><div class="step-name">기획 미팅</div><div class="step-desc">작품 분석 및 음악 방향 설정</div><div class="step-arrow">&#8594;</div></div>
+<div class="step"><div class="step-num">02</div><div class="step-name">작곡 · 편곡</div><div class="step-desc">데모 제작 및 피드백 반영</div><div class="step-arrow">&#8594;</div></div>
+<div class="step"><div class="step-num">03</div><div class="step-name">녹음</div><div class="step-desc">가수 선정 및 프로듀싱</div><div class="step-arrow">&#8594;</div></div>
+<div class="step"><div class="step-num">04</div><div class="step-name">후반 작업</div><div class="step-desc">믹싱 · 마스터링 · 튠</div><div class="step-arrow">&#8594;</div></div>
+<div class="step"><div class="step-num">05</div><div class="step-name">유통 · 발매</div><div class="step-desc">전세계 음원 플랫폼 발매</div></div>
+</div>
+</div></section>
 
-<!-- Artists -->
-<section>
-  <div class="sec reveal">
-    <div class="sec-label">Artists</div>
-    <h2 class="sec-title">함께한 아티스트</h2>
-    <p style="font-size:.85rem;color:var(--gray);font-weight:300;max-width:550px;margin-bottom:1.5rem">아이돌, 오디션 우승자, 인디 아티스트까지 - 76곡 이상의 공식 발매곡을 함께 만들었습니다.</p>
-    <div class="art-chips">
-      <div class="chip">포커즈 대건 <small>아이돌</small></div><div class="chip">포커즈 래현 <small>아이돌</small></div><div class="chip">체리블렛 해윤 <small>아이돌</small></div>
-      <div class="chip">김민지 <small>슈퍼스타K TOP5</small></div><div class="chip">지예송 <small>너목보 우승자</small></div><div class="chip">정명규 <small>판타스틱듀오 우승자</small></div>
-      <div class="chip">이보람 <small>슈퍼스타K TOP10</small></div><div class="chip">희연 <small>새벽공방</small></div><div class="chip">오현 <small>밴드 경지</small></div>
-      <div class="chip">다율 <small>베이비부</small></div><div class="chip">이윤진 <small>무형문화재·국악</small></div><div class="chip">류지수</div><div class="chip">또아 <small>유튜버</small></div>
-    </div>
-  </div>
-</section>
+<section><div class="sec reveal">
+<div class="sec-label">Artists</div><h2 class="sec-title">협력 아티스트</h2>
+<p class="sec-desc">아이돌, 오디션 우승자, 인디 아티스트까지 - 76곡 이상의 공식 발매곡을 함께 만들었습니다.</p>
+<div class="art-chips">
+<div class="chip">포커즈 대건 <small>아이돌</small></div><div class="chip">포커즈 래현 <small>아이돌</small></div><div class="chip">체리블렛 해윤 <small>아이돌</small></div><div class="chip">김민지 <small>슈퍼스타K TOP5</small></div><div class="chip">지예송 <small>너목보 우승자</small></div><div class="chip">정명규 <small>판타스틱듀오 우승자</small></div><div class="chip">이보람 <small>슈퍼스타K TOP10</small></div><div class="chip">희연 <small>새벽공방</small></div><div class="chip">오현 <small>밴드 경지</small></div><div class="chip">다율 <small>베이비부</small></div><div class="chip">이윤진 <small>무형문화재 · 국악</small></div><div class="chip">류지수</div><div class="chip">또아 <small>유튜버</small></div>
+</div>
+</div></section>
 
-<!-- Services -->
-<section style="background:var(--bg2)">
-  <div class="sec reveal">
-    <div class="sec-label">Services</div>
-    <h2 class="sec-title">의뢰 가능 분야</h2>
-    <div class="svc-grid">
-      <div class="svc-card"><h3>OST · 음원 제작</h3><p>웹드라마·웹툰·영화·브랜딩 콘텐츠의 OST 기획부터 유통까지. IP만 제공하시면 제작비 0원 협업도 가능합니다.</p></div>
-      <div class="svc-card"><h3>강의 · 강연 · 워크숍</h3><p>AI 작곡·K-POP 작사·스마트폰 작곡. 공공기관·기업·학교 대상. 전문 장비 없이 실습 가능한 커리큘럼.</p></div>
-      <div class="svc-card"><h3>콘서트 · 공연 기획</h3><p>음악토크콘서트·페스티벌·지역 문화행사의 기획·연출·음악감독. 광복80주년 콘서트 총감독 경험.</p></div>
-    </div>
-  </div>
-</section>
+<section id="ceo" style="background:var(--bg2)"><div class="sec reveal">
+<div class="sec-label">CEO</div><h2 class="sec-title">대표 소개</h2>
+<div class="ceo">
+<div class="ceo-photo"><img src="images/profile1.jpg" alt="윤영준"></div>
+<div class="ceo-info">
+<div class="ceo-name">윤영준 (尹英準)</div>
+<div class="ceo-role">멜로틱레코드 대표 · 음악감독 · 콘텐츠 디렉터</div>
+<p class="ceo-desc">2018년부터 음원 제작 현장에서 축적한 경험을 바탕으로, 작곡 · 프로듀싱 · 공연 기획 · 음악 교육까지 아우르는 통합형 음악 사업을 이끌고 있습니다. 서울시립대학교 · 경희대학교 · 서울시민대학 정규 강좌 운영. 전국 10개+ 기관 정규 출강. 대통령 직속 민주평통 부회장, 통일부 자문위원 역임. 아주경제, 경남FC, 헤럴드경제 등과 협업.</p>
+<div class="ceo-creds"><span class="cred">통일부 장관 표창 (2025)</span><span class="cred">서울시 교육감 표창 (2025)</span><span class="cred">저작권협회 준회원</span><span class="cred">실연자연합회 회원</span><span class="cred">예술인 등록</span></div>
+</div></div>
+</div></section>
 
-<!-- CTA -->
-<section class="cta reveal">
-  <h2>함께 만들어 보시겠습니까?</h2>
-  <p>음원 제작 · 강의 · 콘서트 기획 · 협업 제안 모두 환영합니다.</p>
-  <a href="mailto:dlrnjsrlwkd&#64;naver.com" class="cta-btn">dlrnjsrlwkd&#64;naver.com</a>
-  <div class="cta-sub">멜로틱 레코드 · 윤영준 음악감독</div>
+<section class="cta reveal" id="contact">
+<h2>음원 제작이 필요하신가요?</h2>
+<p>OST · K-POP · 아티스트 맞춤 제작 · 브랜딩 송 · 콘서트 · 광고음악<br>어떤 프로젝트든 15분 통화로 방향을 잡아드립니다.</p>
+<a href="mailto:dlrnjsrlwkd&#64;naver.com" class="cta-btn">dlrnjsrlwkd&#64;naver.com</a>
+<div class="cta-sub">멜로틱 레코드 · 윤영준 대표</div>
 </section>
 
 <footer>&#169; 2026 Melotic Record. All rights reserved.</footer>
-
-<script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
-var r=document.querySelectorAll('.reveal');for(var i=0;i<r.length;i++)o.observe(r[i]);
-</script>
+<script>var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});var r=document.querySelectorAll('.reveal');for(var i=0;i<r.length;i++)o.observe(r[i]);</script>
 </body>
 </html>
